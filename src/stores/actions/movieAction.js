@@ -21,7 +21,7 @@ export const getMovieList = ({page, genre, title}) => {
             })
 
             if (title !== null) {
-                const movieSearch = await axios.get(`http://notflixtv.herokuapp.com/api/v1/movies?search=${title}`)
+                const movieSearch = await axios.get(`https://notflixtv.herokuapp.com/api/v1/movies?search=${title}`)
                 console.log(movieSearch)
                 // sebelumnya: https://awesome-movie-data.herokuapp.com/api/v1/movies/search/?like=${title}&page=${page}
                 dispatch({
@@ -36,7 +36,7 @@ export const getMovieList = ({page, genre, title}) => {
                 })
             }
             else if(genre !== 'all') {
-                const movieSelectedGenre = await axios.get(`http://notflixtv.herokuapp.com/api/v1/movies?page=${page}&genre=${genre}`)
+                const movieSelectedGenre = await axios.get(`https://notflixtv.herokuapp.com/api/v1/movies?page=${page}&genre=${genre}`)
                 console.log(movieSelectedGenre)
                 // sebelumnya: https://awesome-movie-data.herokuapp.com/api/v1/movies/genre?genre=${genre}&page=${page}
                 dispatch({
@@ -95,7 +95,7 @@ export const getGenreList = () => {
                 }
             })
 
-            const genreAll = await axios.get(`http://notflixtv.herokuapp.com/api/v1/movies/genres`)
+            const genreAll = await axios.get(`https://notflixtv.herokuapp.com/api/v1/movies/genres`)
             console.log(genreAll)
             // sebelumnya: https://awesome-movie-data.herokuapp.com/api/v1/movies/allgenre
 
@@ -133,7 +133,7 @@ export const getMovieDetail = (id) => {
                 }
             })
 
-            const movieDetail = await axios.get(`http://notflixtv.herokuapp.com/api/v1/movies/${id}`)
+            const movieDetail = await axios.get(`https://notflixtv.herokuapp.com/api/v1/movies/${id}`)
             console.log(movieDetail)
             // sebelumnya: https://awesome-movie-data.herokuapp.com/api/v1/movies?movieId=${id}
 
