@@ -48,7 +48,7 @@ function MovieDetail() {
         console.log(inputReview);
         const token = JSON.parse(localStorage.getItem('userInfo')).token
         try {
-            const res = await axios.post(`http://notflixtv.herokuapp.com/api/v1/reviews/${id}/create`, inputReview, { headers: {"Authorization" : `Bearer ${token}`} })
+            const res = await axios.post(`https://notflixtv.herokuapp.com/api/v1/reviews/${id}/create`, inputReview, { headers: {"Authorization" : `Bearer ${token}`} })
             console.log(res)
             const userReview = {
                 'data': res.data.data

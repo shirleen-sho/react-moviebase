@@ -33,7 +33,7 @@ function UserEditProfile() {
         const allInput = { ...values, 'image': imageUpload }
         console.log(allInput)
         try {
-            const res = await axios.put('http://notflixtv.herokuapp.com/api/v1/users', allInput, { headers: {"Authorization" : `Bearer ${token}`} })
+            const res = await axios.put('https://notflixtv.herokuapp.com/api/v1/users', allInput, { headers: {"Authorization" : `Bearer ${token}`} })
             console.log(res)
             const userInfo = {
                 'id': res.data.data._id,

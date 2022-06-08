@@ -70,7 +70,7 @@ function NavbarMovie() {
     };
     const handleSignInSubmit = async (values) => {
         try {
-            const res = await axios.post('http://notflixtv.herokuapp.com/api/v1/users/login', inputSignIn)
+            const res = await axios.post('https://notflixtv.herokuapp.com/api/v1/users/login', inputSignIn)
             console.log(res)
             const userInfo = {
                 'id': res.data.data._id,
@@ -117,7 +117,7 @@ function NavbarMovie() {
     };
     const handleSignUpSubmit = async (values) => {
         try {
-            const res = await axios.post('http://notflixtv.herokuapp.com/api/v1/users', inputSignUp)
+            const res = await axios.post('https://notflixtv.herokuapp.com/api/v1/users', inputSignUp)
             console.log(res)
             const userInfo = {
                 'id': res.data.data._id,
