@@ -79,19 +79,12 @@ function MovieHome() {
             <BackTop style={styleBackTop}>
                 <VerticalAlignTopOutlined style={{ fontSize: 20 }} />
             </BackTop>
-            {/* <div className='header relative flex justify-start items-center h-fit'>
-                <div className='absolute ml-24 w-96'>
-                    <h1 className='font-bold text-white text-5xl mb-6'>John Wick 3 : Parabellum</h1>
-                    <p className='font-medium text-white text-sm'>John Wick is on the run after killing a member of the international assassins' guild, and with a $14 million price tag on his head, he is the target of hit men and women everywhere.</p>
-                </div>
-                <img src='/assets/images/Poster.png' className="max-w-full h-full" alt="Poster"/>
-            </div> */}
             <Carousel autoplay>
                 <div>
                     <div style={contentStyle} className='h-80 md:h-100 lg:h-screen px-10 md:px-16 flex flex-row flex-wrap gap-10'>
                         <div className='gap-8 md:gap-10 lg:gap-14 w-full sm:w-1/2 flex flex-col pt-16 sm:pt-20 lg:pt-44'>
                             <span className='font-bold text-4xl sm:text-3xl lg:text-6xl lg:leading-tight'>Welcome to MovieBase !</span>
-                            <span className='text-base md:text-xl lg:text-2xl italic'>MovieBase is a movie database web app</span>
+                            <span className='text-base md:text-xl lg:text-2xl italic'>MovieBase is a minimalistic movie review web app</span>
                         </div>
                         <div className='w-1/2 h-full sm:p-12 lg:p-20 hidden sm:block'>
                             <img src='assets/images/movie.png' alt='Movie' className='w-auto h-full'/>
@@ -146,10 +139,8 @@ function MovieHome() {
                                     placeholderSrc={process.env.PUBLIC_URL + '/spinner.gif'} 
                                 />
                             </div>
-                            { /* item.year ganti jadi item.rating*/}
                             <div className='flex flex-row items-center mt-3'>
                                 <Rate disabled allowHalf defaultValue={item.rating} style={{ fontSize: 14 }}/>
-                                {/* <span className='ml-3' style={{ fontSize: 10 }}>({item.reviews.length})</span> */}
                             </div>
                             <span className='font-bold text-lg mb-2'>{item.title}</span>
                             <div className='flex flex-row flex-wrap gap-1'>
